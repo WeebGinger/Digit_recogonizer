@@ -14,16 +14,33 @@
         color: #212121;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .canvascontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
 </style>
 <body>
-    <h1>Digit Recognition Canvas</h1>
-    <canvas id="drawing-canvas" width="280" height="280"></canvas> 
-    <div>
-        <button onclick="clearCanvas()">Clear</button>
-        <button onclick="predictDigit()">Predict</button>
+    <div class="container">
+        <div class="heading">
+            <h1>Digit Recognition Canvas</h1>
+        </div>
+        <div class="canvascontainer">
+            <canvas id="drawing-canvas" width="280" height="280"></canvas>
+            <div class="buttons">
+                <button onclick="clearCanvas()">Clear</button>
+                <button onclick="predictDigit()">Predict</button>
+            </div>
+            <p id="prediction-result">Prediction: </p>
+        </div>
     </div>
-    <p id="prediction-result">Prediction: </p>
 </body> 
 <script>
     const canvas = document.getElementById("drawing-canvas");
