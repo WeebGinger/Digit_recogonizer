@@ -7,14 +7,22 @@
 </head>
 <style>
     canvas {
-    border: 1px solid black;
-}
+        border: 1px solid #212121;
+    }
+    body {
+        background-color: beige;
+        color: #212121;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
 </style>
 <body>
     <h1>Digit Recognition Canvas</h1>
     <canvas id="drawing-canvas" width="280" height="280"></canvas> 
-    <button onclick="clearCanvas()">Clear</button>
-    <button onclick="predictDigit()">Predict</button>
+    <div>
+        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="predictDigit()">Predict</button>
+    </div>
     <p id="prediction-result">Prediction: </p>
 </body> 
 <script>
