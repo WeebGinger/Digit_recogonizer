@@ -1,4 +1,24 @@
-const canvas = document.getElementById("drawing-canvas");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Recognition</title>
+</head>
+<style>
+    canvas {
+    border: 1px solid black;
+}
+</style>
+<body>
+    <h1>Digit Recognition Canvas</h1>
+    <canvas id="drawing-canvas" width="280" height="280"></canvas> 
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="predictDigit()">Predict</button>
+    <p id="prediction-result">Prediction: </p>
+</body> 
+<script>
+    const canvas = document.getElementById("drawing-canvas");
 const ctx = canvas.getContext("2d");
 
 const canvasOffsetX = canvas.offsetLeft;
@@ -87,3 +107,6 @@ async function predictDigit() {
     })
     
     canvas.addEventListener('mousemove', draw)
+
+</script>
+</html>
