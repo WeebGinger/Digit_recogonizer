@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load your trained model
-model = tf.keras.models.load_model("Mechathon/Digit_Recogonizer/models/DIGITZ_best.h5")
+model = tf.keras.models.load_model("Mechathon/Digit_Recogonizer/models/DIGITZV2_best.h5")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
