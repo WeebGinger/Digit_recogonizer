@@ -2,12 +2,13 @@ from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
 import numpy as np
 import tensorflow as tf
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 # Load your trained model
-model = tf.keras.models.load_model("Mechathon/Digit_Recogonizer/models/DIGITZV2_best.h5")
+model = tf.keras.models.load_model(os.path.join(os.path.dirname(os.path.dirname(__file__)), "models/DIGITZV2_best.h5"))
 
 @app.route("/", methods=["GET", "POST"])
 def index():
