@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load your trained model
-model = tf.keras.models.load_model(os.path.join(os.path.dirname(os.path.dirname(__file__)), "models/DIGITZV2_best.h5"))
+model = tf.keras.models.load_model(os.path.join(os.path.dirname(os.path.dirname(__file__)), "models/DIGITZ3_best.h5"))
 
 @app.route("/", methods=["GET", "POST"])
 def index():
